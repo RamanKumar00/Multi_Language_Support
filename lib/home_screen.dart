@@ -2,6 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:multi_language_support/generated/app_localizations.dart';
 import 'package:provider/provider.dart';
 import 'controller/language_change_controller.dart';
+import 'pages/country_page.dart';
+import 'pages/zone_page.dart';
+import 'pages/division_page.dart';
+import 'pages/depot_page.dart';
+import 'pages/app_page.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -113,6 +118,46 @@ class HomeScreen extends StatelessWidget {
                             }).toList(),
                           ),
                         ),
+                      ),
+                      const SizedBox(height: 30),
+                      ElevatedButton(
+                        onPressed: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (_) => const CountryPage()),
+                        ),
+                        child: Text(AppLocalizations.of(context)!.country),
+                      ),
+                      const SizedBox(height: 10),
+                      ElevatedButton(
+                        onPressed: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (_) => const ZonePage()),
+                        ),
+                        child: Text(AppLocalizations.of(context)!.zone),
+                      ),
+                      const SizedBox(height: 10),
+                      ElevatedButton(
+                        onPressed: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (_) => const DivisionPage()),
+                        ),
+                        child: Text(AppLocalizations.of(context)!.division),
+                      ),
+                      const SizedBox(height: 10),
+                      ElevatedButton(
+                        onPressed: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (_) => const DepotPage()),
+                        ),
+                        child: Text(AppLocalizations.of(context)!.depot),
+                      ),
+                      const SizedBox(height: 10),
+                      ElevatedButton(
+                        onPressed: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (_) => const AppPage()),
+                        ),
+                        child: Text(AppLocalizations.of(context)!.app),
                       ),
                     ],
                   ),

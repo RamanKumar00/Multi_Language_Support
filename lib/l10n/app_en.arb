@@ -1,5 +1,10 @@
 {
     "helloWorld": "Hello World!",
+    "country": "Country: India",
+    "zone": "Zone: ER",
+    "division": "Division: HWH",
+    "depot": "Depot: SYAE",
+    "app": "App: RailOps",
     "@@helloWorld": {
         "description": "A simple greeting."
     }
